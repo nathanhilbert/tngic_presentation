@@ -21,12 +21,15 @@
         <style>
         input.standardinput {
             margin: 0;
-            width: 100%;
+            width: 90px;
             font-family: sans-serif;
             font-size: 18px;
             box-shadow: none;
             background: none;
             border: none;
+        }
+        .result.winner {
+            background-color: greenyellow;
         }
         </style>
         <meta content="authenticity_token" name="csrf-param" />
@@ -125,8 +128,8 @@
                 </div>
                 <div class="sl-block" data-block-type="table" style="height: auto; width: 930px; left: 14px; top: 201px;" data-block-id="aafef2286e67872588bb287c4e65b15c">
                     <div class="sl-block-content" style="z-index: 13; font-size: 61%;" data-table-rows="3" data-table-cols="6" data-table-has-header="true">
-                        <table>
-                            <tbody>
+                        <table class='section example'>
+                            <tbody class='example-1'>
                                 <tr>
                                     <th style="width: 213px;">Business Process</th>
                                     <th>Maintainability(1-10)</th>
@@ -137,21 +140,21 @@
                                     <th>License Cost</th>
                                     <th>Time/Cost Index (1-10)</th>
                                 </tr>
-                                <tr>
+                                <tr class='prop'>
                                     <td style="width: 213px;">Proprietary</td>
-                                    <td><input type="text" value="nothign"/></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><input type="text" class="standardinput main" value="9"/></td>
+                                    <td><input type="text" class="standardinput quality" value="6"/></td>
+                                    <td><input type="text" class="standardinput time" value="8"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="2000"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
-                                <tr>
+                                <tr class='os'>
                                     <td style="width: 213px;">Open Source</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><input type="text" class="standardinput main" value="8"/></td>
+                                    <td><input type="text" class="standardinput quality" value="7"/></td>
+                                    <td><input type="text" class="standardinput time" value="40"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="0"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -168,11 +171,11 @@
                             <tbody>
                                 <tr>
                                     <td>Salary ($/hr)</td>
-                                    <td>30</td>
+                                    <td>$<input type='text' class='standardinput salary' value="30"/></td>
                                 </tr>
                                 <tr>
                                     <td>Cost Threshold</td>
-                                    <td>10000</td>
+                                    <td><input type='text' class='standardinput costthresh' value="10000"/></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -269,8 +272,8 @@
                 </div>
                 <div class="sl-block" data-block-type="table" style="height: auto; width: 930px; left: 14px; top: 201px;" data-block-id="d43e83ea3262d839bb5f386d6fef544f">
                     <div class="sl-block-content" style="z-index: 13; font-size: 61%;" data-table-rows="3" data-table-cols="6" data-table-has-header="true">
-                        <table>
-                            <tbody>
+                        <table class='section adhoc'>
+                            <tbody class='adhoc-1'>
                                 <tr>
                                     <th style="width: 213px;">Business Process</th>
                                     <th>Maintainability(1-10)</th>
@@ -281,21 +284,21 @@
                                     <th>License Cost</th>
                                     <th>Time/Cost Index (1-10)</th>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Proprietary FME</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>80 hrs</td>
-                                    <td>$8,700</td>
-                                    <td></td>
+                                <tr class='prop'>
+                                    <td style="width: 213px;">Proprietary</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Open Source PyGTFS</td>
-                                    <td>6</td>
-                                    <td>9</td>
-                                    <td>8 hrs</td>
-                                    <td>$0</td>
-                                    <td></td>
+                                <tr class='os'>
+                                    <td style="width: 213px;">Open Source</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -369,8 +372,8 @@
                 </div>
                 <div class="sl-block" data-block-type="table" style="height: auto; width: 930px; left: 14px; top: 201px;" data-block-id="ef4d3ea0e6fc780c2e1718c640ad9cf0">
                     <div class="sl-block-content" style="z-index: 12; font-size: 61%;" data-table-rows="3" data-table-cols="6" data-table-has-header="true">
-                        <table>
-                            <tbody>
+                        <table class='section adhoc'>
+                            <tbody class='adhoc-2'>
                                 <tr>
                                     <th style="width: 213px;">Business Process</th>
                                     <th>Maintainability(1-10)</th>
@@ -381,21 +384,21 @@
                                     <th>License Cost</th>
                                     <th>Time/Cost Index (1-10)</th>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Proprietary FME</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>80 hrs</td>
-                                    <td>$8,700</td>
-                                    <td></td>
+                                <tr class='prop'>
+                                    <td style="width: 213px;">Proprietary</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Open Source PyGTFS</td>
-                                    <td>6</td>
-                                    <td>9</td>
-                                    <td>8 hrs</td>
-                                    <td>$0</td>
-                                    <td></td>
+                                <tr class='os'>
+                                    <td style="width: 213px;">Open Source</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -488,8 +491,8 @@
             <section data-id="15278208b68c96cd5d50e935368f8632">
                 <div class="sl-block" data-block-type="table" style="height: auto; width: 930px; left: 14px; top: 201px;" data-block-id="55e60bd0fb8b3ab5b115752decb32271">
                     <div class="sl-block-content" style="z-index: 10; font-size: 61%;" data-table-rows="3" data-table-cols="6" data-table-has-header="true">
-                        <table>
-                            <tbody>
+                        <table class='section desktop'>
+                            <tbody class='desktop-1'>
                                 <tr>
                                     <th style="width: 213px;">Business Process</th>
                                     <th>Maintainability(1-10)</th>
@@ -500,21 +503,21 @@
                                     <th>License Cost</th>
                                     <th>Time/Cost Index (1-10)</th>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Proprietary ArcGIS Desktop</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>80 hrs</td>
-                                    <td>$8,700</td>
-                                    <td></td>
+                                <tr class='prop'>
+                                    <td style="width: 213px;">Proprietary</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Open Source QGIS</td>
-                                    <td>6</td>
-                                    <td>9</td>
-                                    <td>8 hrs</td>
-                                    <td>$0</td>
-                                    <td></td>
+                                <tr class='os'>
+                                    <td style="width: 213px;">Open Source</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -586,8 +589,8 @@
             <section data-id="9a1e0595b5c8569c04a7b47a403576dd">
                 <div class="sl-block" data-block-type="table" style="height: auto; width: 930px; left: 14px; top: 201px;" data-block-id="29ce089cbb44f232c74bedad34310c4b">
                     <div class="sl-block-content" style="z-index: 10; font-size: 61%;" data-table-rows="3" data-table-cols="6" data-table-has-header="true">
-                        <table>
-                            <tbody>
+                        <table class='section desktop'>
+                            <tbody class='desktop-2'>
                                 <tr>
                                     <th style="width: 213px;">Business Process</th>
                                     <th>Maintainability(1-10)</th>
@@ -598,21 +601,21 @@
                                     <th>License Cost</th>
                                     <th>Time/Cost Index (1-10)</th>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Proprietary ArcGIS Desktop</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>80 hrs</td>
-                                    <td>$8,700</td>
-                                    <td></td>
+                                <tr class='prop'>
+                                    <td style="width: 213px;">Proprietary</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Open Source QGIS</td>
-                                    <td>6</td>
-                                    <td>9</td>
-                                    <td>8 hrs</td>
-                                    <td>$0</td>
-                                    <td></td>
+                                <tr class='os'>
+                                    <td style="width: 213px;">Open Source</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -680,8 +683,8 @@
             <section data-id="1da5f05f46f0eb9ee689ca923313e0c5">
                 <div class="sl-block" data-block-type="table" style="height: auto; width: 930px; left: 14px; top: 201px;" data-block-id="b3f0e2cd49ea75b0849068a75ff5c397">
                     <div class="sl-block-content" style="z-index: 10; font-size: 61%;" data-table-rows="3" data-table-cols="6" data-table-has-header="true">
-                        <table>
-                            <tbody>
+                        <table class='section desktop'>
+                            <tbody class='desktop-3'>
                                 <tr>
                                     <th style="width: 213px;">Business Process</th>
                                     <th>Maintainability(1-10)</th>
@@ -692,21 +695,21 @@
                                     <th>License Cost</th>
                                     <th>Time/Cost Index (1-10)</th>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Proprietary ArcGIS Desktop</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>80 hrs</td>
-                                    <td>$8,700</td>
-                                    <td></td>
+                                <tr class='prop'>
+                                    <td style="width: 213px;">Proprietary</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Open Source QGIS</td>
-                                    <td>6</td>
-                                    <td>9</td>
-                                    <td>8 hrs</td>
-                                    <td>$0</td>
-                                    <td></td>
+                                <tr class='os'>
+                                    <td style="width: 213px;">Open Source</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -806,8 +809,8 @@
             <section data-id="4b1599185d1ded3d5ea68681ac909ad3">
                 <div class="sl-block" data-block-type="table" style="height: auto; width: 930px; left: 14px; top: 201px;" data-block-id="7d73de1d1b006c2cbd2fceb849b12868">
                     <div class="sl-block-content" style="z-index: 10; font-size: 61%;" data-table-rows="3" data-table-cols="6" data-table-has-header="true">
-                        <table>
-                            <tbody>
+                        <table class='section web'>
+                            <tbody class='web-1'>
                                 <tr>
                                     <th style="width: 213px;">Business Process</th>
                                     <th>Maintainability(1-10)</th>
@@ -818,21 +821,21 @@
                                     <th>License Cost</th>
                                     <th>Time/Cost Index (1-10)</th>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Proprietary ArcGIS Desktop</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>80 hrs</td>
-                                    <td>$8,700</td>
-                                    <td></td>
+                                <tr class='prop'>
+                                    <td style="width: 213px;">Proprietary</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Open Source QGIS</td>
-                                    <td>6</td>
-                                    <td>9</td>
-                                    <td>8 hrs</td>
-                                    <td>$0</td>
-                                    <td></td>
+                                <tr class='os'>
+                                    <td style="width: 213px;">Open Source</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -898,8 +901,8 @@
             <section data-id="9c8afebe6ff58fbb479afcf122cb70f0">
                 <div class="sl-block" data-block-type="table" style="height: auto; width: 930px; left: 14px; top: 201px;" data-block-id="a0748fc151b815cb132d26ef90f0d997">
                     <div class="sl-block-content" style="z-index: 10; font-size: 61%;" data-table-rows="3" data-table-cols="6" data-table-has-header="true">
-                        <table>
-                            <tbody>
+                        <table class='section web'>
+                            <tbody class='web-2'>
                                 <tr>
                                     <th style="width: 213px;">Business Process</th>
                                     <th>Maintainability(1-10)</th>
@@ -910,21 +913,21 @@
                                     <th>License Cost</th>
                                     <th>Time/Cost Index (1-10)</th>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Proprietary ArcGIS Desktop</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>80 hrs</td>
-                                    <td>$8,700</td>
-                                    <td></td>
+                                <tr class='prop'>
+                                    <td style="width: 213px;">Proprietary</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Open Source QGIS</td>
-                                    <td>6</td>
-                                    <td>9</td>
-                                    <td>8 hrs</td>
-                                    <td>$0</td>
-                                    <td></td>
+                                <tr class='os'>
+                                    <td style="width: 213px;">Open Source</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -996,8 +999,8 @@
             <section data-id="d032d3541a19882a19c9f6e20d25c4c9">
                 <div class="sl-block" data-block-type="table" style="height: auto; width: 930px; left: 14px; top: 201px;" data-block-id="9ff7357493460ac77b7ca2ff18ef89da">
                     <div class="sl-block-content" style="z-index: 10; font-size: 61%;" data-table-rows="3" data-table-cols="6" data-table-has-header="true">
-                        <table>
-                            <tbody>
+                        <table class='section web'>
+                            <tbody class='web-3'>
                                 <tr>
                                     <th style="width: 213px;">Business Process</th>
                                     <th>Maintainability(1-10)</th>
@@ -1008,21 +1011,21 @@
                                     <th>License Cost</th>
                                     <th>Time/Cost Index (1-10)</th>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Proprietary ArcGIS Desktop</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                    <td>80 hrs</td>
-                                    <td>$8,700</td>
-                                    <td></td>
+                                <tr class='prop'>
+                                    <td style="width: 213px;">Proprietary</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
-                                <tr>
-                                    <td style="width: 213px;">Open Source QGIS</td>
-                                    <td>6</td>
-                                    <td>9</td>
-                                    <td>8 hrs</td>
-                                    <td>$0</td>
-                                    <td></td>
+                                <tr class='os'>
+                                    <td style="width: 213px;">Open Source</td>
+                                    <td><input type="text" class="standardinput main" value="10"/></td>
+                                    <td><input type="text" class="standardinput quality" value="10"/></td>
+                                    <td><input type="text" class="standardinput time" value="10"/> hrs</td>
+                                    <td>$<input type="text" class="standardinput license" value="10"/></td>
+                                    <td><div class="result"></div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1060,51 +1063,51 @@
                 <div class="sl-block" data-block-type="table" data-block-id="9e550a676785a781e791f7507fa987b7" style="height: auto; min-width: 120px; min-height: 30px; width: 800px; left: 80px; top: 109px;">
                     <div class="sl-block-content" style="z-index: 12; font-size: 79%;" data-table-rows="9" data-table-cols="3">
                         <table>
-                            <tbody>
+                            <tbody class='resultssection'>
                                 <tr>
                                     <th>Item</th>
                                     <th>Open Source</th>
                                     <th>Proprietary</th>
                                 </tr>
-                                <tr>
+                                <tr class='adhoc-1'>
                                     <td>Ad hoc Analysis - ETL</td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><div class="result os"></div></td>
+                                    <td><div class="result prop"></div></td>
                                 </tr>
-                                <tr>
+                                <tr class='adhoc-2'>
                                     <td>Ad hoc Analysis - Scripts</td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><div class="result os"></div></td>
+                                    <td><div class="result prop"></div></td>
                                 </tr>
-                                <tr>
+                                <tr class='desktop-1'>
                                     <td>Desktop Editing - Software Use</td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><div class="result os"></div></td>
+                                    <td><div class="result prop"></div></td>
                                 </tr>
-                                <tr>
+                                <tr class='desktop-2'>
                                     <td>Desktop Editing - Custom UI</td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><div class="result os"></div></td>
+                                    <td><div class="result prop"></div></td>
                                 </tr>
-                                <tr>
+                                <tr class='desktop-3'>
                                     <td>Desktop Editing - Versioning</td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><div class="result os"></div></td>
+                                    <td><div class="result prop"></div></td>
                                 </tr>
-                                <tr>
+                                <tr class='web-1'>
                                     <td>Web Publishing - Online Data Store</td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><div class="result os"></div></td>
+                                    <td><div class="result prop"></div></td>
                                 </tr>
-                                <tr>
+                                <tr class='web-2'>
                                     <td>Web Publishing - View Method</td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><div class="result os"></div></td>
+                                    <td><div class="result prop"></div></td>
                                 </tr>
-                                <tr>
+                                <tr class='web-3'>
                                     <td>Web Publishing - Mobile Data Collection</td>
-                                    <td></td>
-                                    <td></td>
+                                    <td><div class="result os"></div></td>
+                                    <td><div class="result prop"></div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1198,8 +1201,77 @@ return{cI:!0,aliases:["cos","cls"],k:i,c:[r,t,e.CLCM,e.CBCM,{cN:"built_in",b:/\$
             });
             if( window.hljs ) hljs.initHighlightingOnLoad();
         </script>
-
+<script src='jquery-1.12.3.min.js'></script>
 <script>
+$( document ).ready(function() {
+
+    var calculateTimeCost = function(time, license){
+        time = parseInt(time);
+        license = parseInt(license);
+        var salary = parseInt($(".salary").val());
+        var costthresh = parseInt($(".costthresh").val());
+        var index = (time * salary + license)/(costthresh/10);
+        if (index >=10){
+            return 1;
+        }
+        else if (index <=1){
+            return 10;
+        }
+        else{
+            return parseInt(10-index);
+        }
+    };
+
+    var recalculate = function(){
+        $.each($(".section"), function(k, section){
+            $(section).find(".prop .result").html(
+                calculateTimeCost($(section).find(".prop .time").val(), $(section).find(".prop .license").val())
+                );
+            $(section).find(".os .result").html(
+                calculateTimeCost($(section).find(".os .time").val(), $(section).find(".os .license").val())
+                );
+        });
+
+        $('.result.winner').removeClass("winner");
+
+        $.each($(".resultssection >"), function(k3, result){
+            if ($(result).attr("class")){
+                var classname = "." + $(result).attr("class");
+                $.each(['.os', '.prop'], function(i, sec){
+                    var main = parseInt($(classname + " " + sec + " .main").val());
+                    var quality = parseInt($(classname + " " + sec + " .quality").val());
+                    var index = parseInt($(classname + " " + sec + " .result").html());
+                    $(classname + " .result" + sec).html((main + quality + index)/3);
+                });
+
+                var osresult = parseInt($(classname + " .result.os").html());
+                var propresult = parseInt($(classname + " .result.prop").html());
+
+                if (osresult > propresult){
+                    $(classname + " .result.os").addClass("winner");
+                }
+                else if (osresult < propresult){
+                    $(classname + " .result.prop").addClass("winner");
+                }
+                else{
+                    $(classname + " .result.prop," + classname + " .result.op").addClass("winner");
+                }
+
+            }
+        });
+
+
+    };
+
+    $('.standardinput').on("change", recalculate);
+
+    recalculate();
+
+
+
+});
+
+
 
 </script>
 

@@ -12,4 +12,4 @@ data editing, and analysis. Each process will be laid out in two parallel tracks
 proprietary. A scorecard for each will be tallied as I discuss software choices, time, money, utility,
 and complexity. Hopefully, there will be plenty of insights as we review the results.
 This presentation is ideal for business analysts, managers, directors, and those that are interested
-in how the other side approaches a p
+in how the other side approaches a problem.
